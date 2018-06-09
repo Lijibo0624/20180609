@@ -1,0 +1,164 @@
+.view {
+  color: #666;
+}
+
+header {
+  height: 40px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > .logo {
+  width: 70px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: 0 -110px;
+  background-origin: content-box;
+  background-clip: content-box;
+  padding: 7px 7px;
+}
+
+header .search {
+  padding: 5px 0;
+  flex: 1;
+  position: relative;
+}
+
+header .search::before {
+  content: "";
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: -60px -110px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+}
+
+header .search > input {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding-left: 30px;
+}
+
+header > .login {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  width: 25%;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+nav a > img {
+  width: 50%;
+}
+
+.sec_kill .kill_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.sec_kill .kill_title .clock {
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: -85px -110px;
+  width: 20px;
+  height: 20px;
+}
+
+.sec_kill .kill_title .kill_font {
+  color: #c91523;
+}
+
+.sec_kill .kill_title .timer {
+  font-size: 0px;
+}
+
+.sec_kill .kill_title .timer span {
+  font-size: 16px;
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 0 2px;
+  margin-right: 3px;
+}
+
+.sec_kill .kill_title .timer span:nth-child(3n) {
+  background-color: #fff;
+  color: #3d3d3d;
+}
+
+.sec_kill .kill_title > a {
+  font-size: 14px;
+}
+
+.sec_kill .kill_content {
+  display: flex;
+}
+
+.sec_kill .kill_content a {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.sec_kill .kill_content a .tips {
+  position: absolute;
+  top: 100px;
+  left: 85px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #fdb60a;
+  border-radius: 50%;
+  padding: 2px 7px;
+}
+
+.sec_kill .kill_content a .new_price {
+  color: #c91523;
+}
+
+.festival .fes_title {
+  position: relative;
+}
+
+.festival .fes_title ul {
+  position: absolute;
+  bottom: 5px;
+}
+
+.festival .fes_title ul li {
+  width: 50%;
+  float: left;
+  padding: 0 5px;
+}
+
+.festival .fes_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.festival .fes_content a {
+  float: left;
+  width: 50%;
+}
+
+.festival .fes_content a:nth-child(-n+3) {
+  width: 33.3%;
+}
+/*# sourceMappingURL=index.css.map */

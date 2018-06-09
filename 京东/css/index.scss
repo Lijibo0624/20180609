@@ -1,0 +1,151 @@
+@mixin jd-sprites($x,$y){
+    background-image: url(../images/jd-sprites.png);
+    background-size:200px 200px;
+    background-position: $x $y;
+}
+$jd-color:#c91523;
+.view{
+    color: #666;
+}
+header{
+    height: 40px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    >.logo{
+        width: 70px;
+        @include jd-sprites(0,-110px);
+        background-origin: content-box;
+        background-clip: content-box;
+        padding: 7px 7px;
+    }
+    .search{
+        padding: 5px 0;
+        flex: 1;
+        position: relative;
+        // 搜索图标
+        &::before{
+            content: "";
+            @include jd-sprites(-60px,-110px );
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 12px;
+            left: 8px;
+        }
+
+        >input{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            padding-left: 30px;
+        }
+    }
+    >.login{
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-weight: 600;
+    }
+}
+// 导航部分
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+        width: 25%;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 14px;
+        >img{
+            width: 50%;
+        }
+    }
+}
+// 秒杀
+.sec_kill{
+    .kill_title{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        .clock{
+            @include jd-sprites(-85px,-110px );
+            width: 20px;
+            height: 20px;
+        }
+        .kill_font{
+            color:$jd-color;
+        }
+        .timer{
+            font-size: 0px;
+            span{
+                font-size: 16px;
+                background-color: #3d3d3d;
+                color:#fff;
+                padding: 0 2px;
+                margin-right: 3px;
+            }
+            span:nth-child(3n){
+                background-color: #fff;
+                color: #3d3d3d;
+            }
+            
+        }
+        >a{
+            font-size: 14px;
+        }
+
+    }
+
+    .kill_content{
+        display: flex;
+        a{
+            flex:1;
+            position: relative;
+            text-align: center;
+           .tips{
+               position: absolute;
+               top:100px;
+               left: 85px;
+               font-size: 14px;
+               color: #fff;
+               background-color: #fdb60a;
+               border-radius: 50%;
+               padding: 2px 7px;
+               
+           }
+           .new_price{
+               color:$jd-color;
+           }
+        }
+    }
+}
+.festival{
+    .fes_title{
+        position: relative;
+        ul{
+            position: absolute;
+            bottom: 5px;
+            li{
+                width: 50%;
+                float: left;
+                padding: 0 5px;
+            }
+        }
+    }
+    .fes_content{
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            float: left;
+            width: 50%;
+        }
+        a:nth-child(-n+3)
+        {
+            width: 33.3%;
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    // 继承父亲的颜色
+    color:inherit;
+    display: block;
+    // a标签在移动端上的点击高亮 
+  -webkit-tap-highlight-color: transparent;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+    // 去掉默认3px
+    vertical-align: middle;
+}
+input{
+    outline: none;
+    border: none;
+}
+// 清楚浮动
+clerafix::after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+    line-height: 0;
+}
